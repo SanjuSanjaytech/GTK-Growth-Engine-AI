@@ -29,21 +29,22 @@ export default function Dashboard() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         
         {/* Chart Card */}
-        <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl shadow-xl p-6">
+        <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl shadow-xl p-6 min-w-0">
           <h3 className="text-lg font-semibold text-white mb-4">
             Lead Score by Vertical
           </h3>
 
-          <div className="h-65">
-            <ResponsiveContainer width="100%" height="100%">
+                  <div className="bg-gray-900 rounded-xl p-4 w-full">
+          {leads.length > 0 ? (
+            <ResponsiveContainer width="100%" height={300}>
               <BarChart data={leads}>
-                <XAxis 
-                  dataKey="vertical" 
+                <XAxis
+                  dataKey="vertical"
                   stroke="#9CA3AF"
                   tick={{ fontSize: 12 }}
                 />
                 <YAxis stroke="#9CA3AF" />
-                <Tooltip 
+                <Tooltip
                   contentStyle={{
                     backgroundColor: "#111827",
                     border: "1px solid #374151",
@@ -51,17 +52,21 @@ export default function Dashboard() {
                     color: "#fff",
                   }}
                 />
-                <Bar 
-                  dataKey="score" 
+                <Bar
+                  dataKey="score"
                   radius={[8, 8, 0, 0]}
                   fill="#3B82F6"
                 />
               </BarChart>
             </ResponsiveContainer>
-          </div>
+          ) : (
+            <p className="text-gray-400 text-sm">Loading chart data…</p>
+          )}
         </div>
 
-        {/* Stats Card (Optional but recommended) */}
+        </div>
+
+        {/* Total Leads Card */}
         <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl shadow-xl p-6 flex flex-col justify-between">
           <div>
             <h3 className="text-lg font-semibold text-white mb-2">
