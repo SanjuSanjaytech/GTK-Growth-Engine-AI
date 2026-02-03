@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Ravi",
+    "phone": "9876543210",
+    "vertical": "Bakery",
+    "source": "Google Ads",
+    "campaign": "Bakery Morning Boost",
+    "feedback": "I want more customers daily"
+  },
+  {
+    "name": "Anita",
+    "phone": "9123456789",
+    "vertical": "Clothing",
+    "source": "Instagram",
+    "campaign": "Festive Sale",
+    "feedback": "Interested but need pricing"
+  }
+]

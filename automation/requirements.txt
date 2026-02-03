@@ -1,0 +1,6 @@
+pandas
+scikit-learn
+reportlab
+google-generativeai
+python-dotenv
+schedule
